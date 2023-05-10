@@ -6,7 +6,7 @@
 %define current_commit %(git rev-parse --short HEAD)
 
 Version: 0.3.3
-%global commit git-1.0%{current_commit}
+%global commit %{current_commit}
 
 %gometa
 
