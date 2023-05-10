@@ -3,11 +3,11 @@
 # https://github.com/redhatinsights/yggdrasil
 %global goipath         github.com/redhatinsights/yggdrasil
 
-%define current_commit %(git rev-parse --short HEAD)
+%define current_commit %(git rev-parse HEAD)
 
 Version: 0.3.3
-%global tag 0.3.3
-%global commit %{current_commit}
+#%global tag 0.3.3
+#%global commit %{current_commit}
 
 %gometa
 
@@ -38,8 +38,8 @@ BuildRequires:  pkgconfig(bash-completion)
 %gopkg
 
 %prep
-
-%goprep -k
+%forgesetup
+#%goprep -k
 
 %build
 
