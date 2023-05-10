@@ -3,8 +3,10 @@
 # https://github.com/redhatinsights/yggdrasil
 %global goipath         github.com/redhatinsights/yggdrasil
 
+%define current_commit %(git rev-parse --short HEAD)
+
 Version: 0.3.3
-%global commit e851020
+%global commit git-1.0%{current_commit}
 
 %gometa
 
