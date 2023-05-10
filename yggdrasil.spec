@@ -6,8 +6,8 @@
 %define current_commit %(git rev-parse HEAD)
 
 Version: 0.3.3
-#%global tag 0.3.3
-#%global commit %{current_commit}
+# %global tag 0.3.3
+# %global commit %{current_commit}
 
 %gometa
 
@@ -39,7 +39,7 @@ BuildRequires:  pkgconfig(bash-completion)
 
 %prep
 %forgesetup
-#%goprep -k
+# %goprep -k
 
 %build
 
