@@ -3,7 +3,7 @@
 # https://github.com/redhatinsights/yggdrasil
 %global goipath         github.com/redhatinsights/yggdrasil
 
-Version: 0.3.1
+Version: 0.3.3
 
 %gometa
 
@@ -72,5 +72,11 @@ export %gomodulesmode
 %gopkgfiles
 
 %changelog
+* Wed May 10 2023 Jiri Hnidek <jhnidek@redhat.com> 0.3.3-1
+- new package built with tito
+
+* Wed May 10 2023 Jiri Hnidek <jhnidek@redhat.com>
+- new package built with tito
+
 * Wed Mar  8 2023 Link Dupont <linkdupont@fedoraproject.org> - 0.3.1-2
 - Initial package
