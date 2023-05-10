@@ -4,6 +4,7 @@
 %global goipath         github.com/redhatinsights/yggdrasil
 
 Version: 0.3.3
+%global commit e851020
 
 %gometa
 
