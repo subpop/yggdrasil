@@ -3,9 +3,7 @@
 # https://github.com/redhatinsights/yggdrasil
 %global goipath         github.com/redhatinsights/yggdrasil
 
-Version:
-%global tag
-%global commit
+Version: 0.3.1
 
 %gometa
 
