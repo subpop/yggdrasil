@@ -5,7 +5,7 @@
 
 %define current_commit %(git rev-parse HEAD)
 
-Version: 0.3.3
+Version: 0.3.4
 
 %gometa
 
@@ -75,6 +75,9 @@ export %gomodulesmode
 %gopkgfiles
 
 %changelog
+* Thu May 11 2023 Jiri Hnidek <jhnidek@redhat.com> 0.3.4-1
+- Try to fix spec file. (jhnidek@redhat.com)
+
 * Wed May 10 2023 Jiri Hnidek <jhnidek@redhat.com> 0.3.3-1
 - new package built with tito
 
