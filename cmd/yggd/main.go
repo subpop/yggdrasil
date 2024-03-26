@@ -168,6 +168,24 @@ func main() {
 			return nil
 		}
 
+		pidFile := filepath.Join(yggdrasil.LocalstateDir, "run", yggdrasil.ShortName+".pid")
+		if fileExists(pidFile) {
+			return cli.Exit(
+				fmt.Errorf("cannot start %v: another process already exists", yggdrasil.ShortName),
+				1,
+			)
+		}
+
+		pid := os.Getpid()
+		if err := os.WriteFile(pidFile, []byte(fmt.Sprintf("%v", pid)), 0600); err != nil {
+			return cli.Exit(fmt.Errorf("cannot write pid file: %v", err), 1)
+		}
+		defer func(pidFile string) {
+			if err := os.Remove(pidFile); err != nil {
+				log.Errorf("cannot remove pid file: %v", err)
+			}
+		}(pidFile)
+
 		// Set TopicPrefix globally if the config option is non-zero
 		if c.String("topic-prefix") != "" {
 			yggdrasil.TopicPrefix = c.String("topic-prefix")
